@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "histonia"
+version = "0.1.0"
+description = "High-resolution tiles of Estonia orthophoto maps"
+authors = ["Marti Raudsepp <marti@juffo.org>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+MapProxy = "^1.13.0"
+pyproj = "^3.1.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

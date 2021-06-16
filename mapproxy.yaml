@@ -1,0 +1,45 @@
+# MapProxy configuration
+# ----------------------
+# https://mapproxy.org/docs/latest/configuration.html
+
+services:
+  demo:
+  tms:
+    use_grid_names: true
+    origin: 'nw'
+
+layers:
+  - name: xgis
+    title: Maaamet X-GIS
+    sources: [xgis_cache]
+
+caches:
+  xgis_cache:
+    cache:
+      type: file
+      use_grid_names: true
+    downscale_tiles: 2
+    grids: [hidpi]
+    sources: [xgis_wms]
+    meta_size: [2, 2]
+
+sources:
+  xgis_wms:
+    type: wms
+    req:
+      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      layers: EESTIFOTO
+    concurrent_requests: 4
+    supported_srs: ['EPSG:3301']
+    coverage:
+      # Source for bounding box: https://epsg.io/3301
+      bbox: [282560, 6381157, 734255, 6658861]
+      bbox_srs: 'EPSG:3301'
+
+grids:
+    hidpi:
+        base: GLOBAL_WEBMERCATOR
+        tile_size: [512, 512]
+        num_levels: 22
+
+globals:
