@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "histonia"
 version = "0.1.0"
-description = "High-resolution tiles of Estonia orthophoto maps"
+description = "High-resolution tiles of Estonian aerial photo maps"
 authors = ["Marti Raudsepp <marti@juffo.org>"]
 
 [tool.poetry.dependencies]

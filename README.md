@@ -6,10 +6,10 @@ HiStonia is a [MapProxy](https://mapproxy.org/) configuration for serving up
 which you can use as imagery in the **OpenStreetMap iD editor**.
 
 High-resolution tiles are available from Maa-amet's WMS servers, but
-unfortunately the iD editor only supports the TMS protocol, not WMS.
+unfortunately the iD editor only supports the TMS (Tile Map Service) protocol,
+not WMS.
 
-This MapProxy configuration converts provides a TMS API and converts back and
-forth between WMS.
+This MapProxy configuration provides TMS and converts back and forth between WMS.
 
 ### Usage
 
