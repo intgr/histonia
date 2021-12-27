@@ -35,7 +35,7 @@ Click on the "•••" next to "Custom" and enter the following URL:
 http://localhost:8080/tiles/xgis/hidpi/{zoom}/{x}/{y}.png
 ```
 
-#### LIDAR maps
+### LIDAR maps
 
 There are two maps derived from LIDAR surveys.
 
