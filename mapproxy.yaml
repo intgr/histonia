@@ -14,6 +14,12 @@ layers:
   - name: xgis
     title: Maaamet X-GIS
     sources: [xgis_cache]
+  - name: xgis_terrain
+    title: Maaamet Terrain
+    sources: [xgis_terrain_cache]
+  - name: xgis_surface
+    title: Maaamet Surface
+    sources: [xgis_surface_cache]
 
 caches:
   xgis_cache:
@@ -25,12 +31,55 @@ caches:
     sources: [xgis_wms]
     meta_size: [2, 2]
 
+  # DTM (Digital Terrain Model) only
+  xgis_terrain_cache:
+    cache:
+      type: file
+      use_grid_names: true
+    grids: [hidpi]
+    sources: [xgis_wms_terrain]
+
+  # DSM (Digital Surface Model) and DTM layers overlaid on top of each other
+  xgis_surface_cache:
+    cache:
+      type: file
+      use_grid_names: true
+    grids: [hidpi]
+    sources: [xgis_wms_surface]
+
 sources:
   xgis_wms:
     type: wms
     req:
       url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
       layers: EESTIFOTO
+    concurrent_requests: 4
+    supported_srs: ["EPSG:3301"]
+    coverage:
+      # Source for bounding box: https://epsg.io/3301
+      bbox: [282560, 6381157, 734255, 6658861]
+      bbox_srs: "EPSG:3301"
+
+  # DTM - Digital Terrain Model - represents the bare ground surface without any objects like plants and buildings
+  xgis_wms_terrain:
+    type: wms
+    req:
+      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      layers: colormap,HYBRID,colormap_shade
+    concurrent_requests: 4
+    supported_srs: ["EPSG:3301"]
+    coverage:
+      # Source for bounding box: https://epsg.io/3301
+      bbox: [282560, 6381157, 734255, 6658861]
+      bbox_srs: "EPSG:3301"
+
+  # nDSM - normalised Digital Surface Model - captures both the natural and built/artificial features of the environment
+  # This is an overlay used on top of DTM.
+  xgis_wms_surface:
+    type: wms
+    req:
+      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      layers: colormap,HYBRID,colormap_shade,nDSM
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
     coverage:
