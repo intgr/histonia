@@ -39,22 +39,22 @@ http://localhost:8080/tiles/xgis/hidpi/{zoom}/{x}/{y}.png
 
 There are two maps derived from LIDAR surveys.
 
-[<img src="https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-01-thumb.jpg">](https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-01.png)
+| Terrain (DTM) | Surface (DSM) |
+| ------------- | ------------- |
+| [<img src="https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-01-thumb.jpg">](https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-01.png) | [<img src="https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01-thumb.jpg">](https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01.png) |
 
 Digital Terrain Model (DTM) - represents the bare ground surface without any
 objects like plants and buildings:
 
 * Demo: http://localhost:8080/demo/?tms_layer=xgis_terrain&format=png&srs=EPSG:3857
-* URL for iD editor: `http://localhost:8080/tiles/xgis_terrain/hidpi/{zoom}/{x}/{y}.png`
-
-[<img src="https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01-thumb.jpg">](https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01.png)
+* URL for iD editor: `http://localhost:8080/tiles/xgis_terrain/normal/{zoom}/{x}/{y}.png`
 
 Digital Surface Model (DSM), overlaid on top of DTM - represents the surface
 with objects like buildings and trees. Note: The surface layer is only visible
 at higher zoom levels.
 
 * Demo: http://localhost:8080/demo/?tms_layer=xgis_surface&format=png&srs=EPSG:3857
-* URL for iD editor: `http://localhost:8080/tiles/xgis_surface/hidpi/{zoom}/{x}/{y}.png`
+* URL for iD editor: `http://localhost:8080/tiles/xgis_surface/normal/{zoom}/{x}/{y}.png`
 
 ### Is this allowed?
 
