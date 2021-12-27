@@ -49,7 +49,8 @@ objects like plants and buildings:
 [<img src="https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01-thumb.jpg">](https://raw.githubusercontent.com/intgr/static/master/histonia/histonia-terrain-surface-01.png)
 
 Digital Surface Model (DSM), overlaid on top of DTM - represents the surface
-with objects like buildings and trees:
+with objects like buildings and trees. Note: The surface layer is only visible
+at higher zoom levels.
 
 * Demo: http://localhost:8080/demo/?tms_layer=xgis_surface&format=png&srs=EPSG:3857
 * URL for iD editor: `http://localhost:8080/tiles/xgis_surface/hidpi/{zoom}/{x}/{y}.png`
