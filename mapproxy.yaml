@@ -36,7 +36,7 @@ caches:
     cache:
       type: file
       use_grid_names: true
-    grids: [normal]
+    grids: [hidpi]
     sources: [xgis_wms_terrain]
 
   # DSM (Digital Surface Model) and DTM layers overlaid on top of each other
@@ -44,7 +44,7 @@ caches:
     cache:
       type: file
       use_grid_names: true
-    grids: [normal]
+    grids: [hidpi]
     sources: [xgis_wms_surface]
 
 sources:
@@ -92,7 +92,5 @@ grids:
     base: GLOBAL_WEBMERCATOR
     tile_size: [512, 512]
     num_levels: 22
-  normal:
-    base: GLOBAL_WEBMERCATOR
 
 globals:
