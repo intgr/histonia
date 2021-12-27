@@ -2,13 +2,14 @@ HiStonia
 ========
 
 HiStonia is a [MapProxy](https://mapproxy.org/) configuration for serving up
-**high-resolution tiles** from Estonian Maa-amet (Land Board) aerial photo maps,
+**high-resolution tiles** from Estonian Maa-amet (Land Board) aerophoto maps
 and LIDAR maps, which you can use as imagery in the **OpenStreetMap iD editor**.
 
 High-resolution tiles and LIDAR tiles are available from Maa-amet's WMS servers,
 but the iD editor only supports the TMS (Tile Map Service) protocol, not WMS.
 
-This MapProxy configuration provides TMS and converts back and forth between WMS.
+This MapProxy configuration provides a TMS service and converts back and forth
+between WMS.
 
 ### Usage
 
