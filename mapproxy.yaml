@@ -36,7 +36,7 @@ caches:
     cache:
       type: file
       use_grid_names: true
-    grids: [hidpi]
+    grids: [normal]
     sources: [xgis_wms_terrain]
 
   # DSM (Digital Surface Model) and DTM layers overlaid on top of each other
@@ -44,7 +44,7 @@ caches:
     cache:
       type: file
       use_grid_names: true
-    grids: [hidpi]
+    grids: [normal]
     sources: [xgis_wms_surface]
 
 sources:
@@ -66,7 +66,6 @@ sources:
     req:
       url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
       layers: colormap,HYBRID,colormap_shade
-      transparent: true
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
     coverage:
@@ -81,7 +80,6 @@ sources:
     req:
       url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
       layers: colormap,HYBRID,colormap_shade,nDSM
-      transparent: true
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
     coverage:
@@ -94,5 +92,7 @@ grids:
     base: GLOBAL_WEBMERCATOR
     tile_size: [512, 512]
     num_levels: 22
+  normal:
+    base: GLOBAL_WEBMERCATOR
 
 globals:
