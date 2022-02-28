@@ -5,9 +5,9 @@ description = "High-resolution tiles of Estonian aerial photo maps"
 authors = ["Marti Raudsepp <marti@juffo.org>"]
 
 [tool.poetry.dependencies]
-python = ">=3.7"
-MapProxy = "^1.13.0"
-pyproj = "^3.1.0"
+python = ">=3.8"
+MapProxy = "^1.14.0"
+pyproj = "^3.3.0"
 
 [tool.poetry.dev-dependencies]
 
