@@ -51,7 +51,7 @@ sources:
   xgis_wms:
     type: wms
     req:
-      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      url: https://kaart.maaamet.ee/wms/fotokaart?
       layers: EESTIFOTO
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
@@ -64,7 +64,7 @@ sources:
   xgis_wms_terrain:
     type: wms
     req:
-      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      url: https://xgis.maaamet.ee/xgis2/service/1h00/mit?
       layers: colormap,HYBRID,colormap_shade
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
@@ -78,7 +78,7 @@ sources:
   xgis_wms_surface:
     type: wms
     req:
-      url: https://xgis.maaamet.ee/xgis2/service/i6na/mit?
+      url: https://xgis.maaamet.ee/xgis2/service/1h00/mit?
       layers: colormap,HYBRID,colormap_shade,nDSM
     concurrent_requests: 4
     supported_srs: ["EPSG:3301"]
